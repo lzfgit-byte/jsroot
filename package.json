@@ -1,7 +1,10 @@
 {
   "name": "jsroot",
   "version": "1.0.0",
+  "scripts": {
+    "dev": ""
+  },
   "dependencies": {
-
+    "typescript": "^5.0.3"
   }
 }
