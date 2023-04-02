@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
+    "target": "es6",
     "module": "commonjs",
-    "target": "es5",
+    "moduleResolution": "node",
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "baseUrl": "/",
     "sourceMap": true,
-    "outFile": "dist",
+    "outDir": "dist",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "files": [],
   "include": [
     "src/**/*"
   ],

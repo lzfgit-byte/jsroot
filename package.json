@@ -1,10 +1,16 @@
 {
   "name": "jsroot",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": ""
+    "tsc": "rimraf dist && tsc",
+    "clearn": "rimraf dist",
+    "test": "node /src/test.js"
   },
-  "dependencies": {
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "rimraf": "^3.0.2",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.3"
   }
 }
