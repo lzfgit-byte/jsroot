@@ -1,3 +1,3 @@
-import { doOthers, doSomething } from '@/rootjs/mouse';
+import { test } from '@/rootjs/mouse';
 
-doSomething();
+test();

@@ -20,5 +20,8 @@
     "tsc-alias": "^1.8.5",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "robotjs": "^0.6.0"
   }
 }

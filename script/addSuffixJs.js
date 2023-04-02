@@ -47,7 +47,7 @@ const buildFilePath = (res, basePath) => {
   const res = [];
   buildFilePath(res, outDir);
   res.forEach((item, index) => {
-    console.log(`重写【${index}】/${res.length}`);
+    console.log(`重写【${index + 1}】/${res.length}`);
     reWriteFile(item.path);
   });
 })();
