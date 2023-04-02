@@ -3,15 +3,17 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "tsc": "rimraf dist && tsc",
-    "dev": "npm run tsc && node dist/src/index.js",
+    "tsc": "rimraf dist && tsc && tsc-alias",
+    "dev": "npm run tsc && npm run suffixJs && node dist/index.js",
     "clearn": "rimraf dist",
-    "test": "node dist/src/index.js"
+    "suffixJs": "node script/addSuffixJs.js",
+    "test": "node dist/index.js"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
     "rimraf": "^3.0.2",
-    "ts-node-dev": "^2.0.0",
+    "tsc-alias": "^1.8.5",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3"
   }
 }
