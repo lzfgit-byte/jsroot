@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "tsc": "rimraf dist && tsc && tsc-alias",
+    "tsc": "rimraf dist && rimraf tsconfig.tsbuildinfo && tsc && tsc-alias",
     "dev": "npm run tsc && npm run suffixJs && node dist/index.js",
     "clearn": "rimraf dist",
     "suffixJs": "node script/addSuffixJs.js",
