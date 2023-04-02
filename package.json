@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "tsc": "rimraf dist && tsc",
+    "dev": "npm run tsc && node /dist/index.js",
     "clearn": "rimraf dist",
     "test": "node /src/test.js"
   },

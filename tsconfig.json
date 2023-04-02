@@ -1,21 +1,19 @@
 {
   "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "downlevelIteration": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
     "baseUrl": "/",
     "sourceMap": true,
     "outDir": "dist",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src/**/*"
-  ],
+  "include": ["src", "package.json"],
   "exclude": [
     "node_modules"
   ]
