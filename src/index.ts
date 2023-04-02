@@ -1,5 +1,4 @@
-// import {doSomething} from "@/rootjs/mouse";
-import {readdir} from 'fs';
-readdir('c:/',()=>{})
-// doSomething();
+import {doSomething} from "@/rootjs/mouse";
+
+doSomething();
 console.log('446545656')
