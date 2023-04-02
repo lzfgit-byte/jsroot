@@ -9,25 +9,17 @@ const getOutDir = () => {
 const reWriteFile = (path) => {
   let personList = readFileSync(path, { encoding: 'utf8' });
 
-  let regexpNames = /(?:export|import)(?:\s)*?(?:\{)??.*?(?:\})??(?:\s)*?from(?:\s)*?"(.+?)"/gm;
-
-  let match = personList.matchAll(regexpNames);
-
-  let count = 0;
-  for (let item of match) {
-    if (/.js$/.test(item[1])) {
-      continue;
+  const splits = personList.split('\n');
+  const res = [];
+  splits.forEach((row) => {
+    if (row.startsWith('import') && row.includes('from') && !row.endsWith(".js'")) {
+      row = row.substring(0, row.length - 2);
+      row += ".js'";
     }
-    let temp = item[0];
-    let index = item.index + count;
-    let now = temp.replace(item[1], `${item[1]}.js`);
-    let past = personList.slice(0, index);
-    let feature = personList.slice(index + temp.length, personList.length);
-    personList = `${past}${now}${feature}`;
-    count = count + 3;
-  }
-
-  writeFileSync(path, personList, { encoding: 'utf8' });
+    res.push(row);
+  });
+  console.log(res);
+  writeFileSync(path, res.join('\n'), { encoding: 'utf8' });
 };
 const buildFilePath = (res, basePath) => {
   const files = readdirSync(basePath, { encoding: 'utf-8' });
