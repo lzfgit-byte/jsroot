@@ -4,9 +4,9 @@
   "type": "module",
   "scripts": {
     "tsc": "rimraf dist && tsc",
-    "dev": "npm run tsc && node /dist/index.js",
+    "dev": "npm run tsc && node dist/src/index.js",
     "clearn": "rimraf dist",
-    "test": "node /src/test.js"
+    "test": "node dist/src/index.js"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
